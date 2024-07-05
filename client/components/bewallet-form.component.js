@@ -19,8 +19,8 @@ angular.module("beWalletApp").component("bewalletForm", {
       operator: "",
       email: "",
       first_name: "",
-      callback: window.env.callbackUrl,
-      success_url: window.env.successUrl,
+      callback: window.env.callbackUrl + "/api/payment",
+      success_url: window.env.successUrl + "/success.html",
       cancel_url: window.env.cancelUrl,
     };
 

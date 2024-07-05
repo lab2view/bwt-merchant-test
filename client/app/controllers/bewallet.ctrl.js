@@ -26,17 +26,8 @@ angular
 
     $scope.callbacks = [];
 
-    // $http
-    //   .get("/api/callbacks")
-    //   .then(function (response) {
-    //     $scope.callbacks = response.data;
-    //   })
-    //   .catch(function (error) {
-    //     console.error("Error fetching callbacks:", error);
-    //   });
-
     $http
-      .get("../data/callbacks.json")
+      .get("/api/callbacks")
       .then(
         function (response) {
           this.callbacks = response.data;
@@ -44,8 +35,20 @@ angular
         }.bind(this)
       )
       .catch(function (error) {
-        console.error(error);
+        console.error("Error fetching callbacks:", error);
       });
+
+    // $http
+    //   .get("../data/callbacks.json")
+    //   .then(
+    //     function (response) {
+    //       this.callbacks = response.data;
+    //       console.log(this.callbacks);
+    //     }.bind(this)
+    //   )
+    //   .catch(function (error) {
+    //     console.error(error);
+    //   });
 
     $scope.submit = function () {
       $http

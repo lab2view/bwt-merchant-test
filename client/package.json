@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp": "node node_modules/gulp-cli/bin/gulp.js replaceUrls"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "angular": "^1.8.3"
+    "angular": "^1.8.3",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-replace": "^1.1.4"
   }
 }
