@@ -35,6 +35,10 @@ db.run(createTableQuery, (err) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("The API is working!");
+});
+
 app.post("/api/payment", (req, res) => {
   const formData = req.body;
 
