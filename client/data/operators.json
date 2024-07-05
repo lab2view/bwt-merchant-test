@@ -40,5 +40,17 @@
     "country": "BFA",
     "currency": "XOF",
     "operator": "Wave BFA"
+  },
+  {
+    "code": "2371",
+    "country": "CMR",
+    "currency": "XAF",
+    "operator": "Orange CMR"
+  },
+  {
+    "code": "2372",
+    "country": "CMR",
+    "currency": "XAF",
+    "operator": "MTN CMR"
   }
 ]

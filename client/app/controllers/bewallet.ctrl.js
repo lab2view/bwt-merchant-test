@@ -16,22 +16,43 @@ angular
       cancel_url: window.env.cancelUrl,
     };
 
+    $scope.statusIcons = {
+      pending: "fas fa-clock",
+      success: "fas fa-check",
+      failed: "fas fa-times",
+    };
+
     $scope.operators = [];
 
     $scope.callbacks = [];
 
+    // $http
+    //   .get("/api/callbacks")
+    //   .then(function (response) {
+    //     $scope.callbacks = response.data;
+    //   })
+    //   .catch(function (error) {
+    //     console.error("Error fetching callbacks:", error);
+    //   });
+
     $http
-      .get("/api/callbacks")
-      .then(function (response) {
-        $scope.callbacks = response.data;
-      })
+      .get("../data/callbacks.json")
+      .then(
+        function (response) {
+          this.callbacks = response.data;
+          console.log(this.callbacks);
+        }.bind(this)
+      )
       .catch(function (error) {
-        console.error("Error fetching callbacks:", error);
+        console.error(error);
       });
 
     $scope.submit = function () {
       $http
-        .post("/api/payment", $scope.formData)
+        .post(
+          "https://staging-merchant.be-wallet.net/api/v2/payments/checkout/init?locale=fr",
+          $scope.formData
+        )
         .then(function (response) {
           window.location.href = response.data.payment_url;
         })

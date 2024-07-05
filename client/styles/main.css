@@ -8,11 +8,10 @@ body {
   min-height: 100vh;
 }
 
-
 .container {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  width: 50%; 
   height: 50%;
   background-color: #fff;
   border-radius: 5px;
@@ -44,8 +43,7 @@ body {
   flex: 1;
   background-color: #333;
   color: rgb(255, 191, 0);
-  padding: 20px;  
-  width: 100%;
+  padding: 40px;  
   border-radius: 0px 0px 5px 0px;
 }
 
@@ -91,9 +89,29 @@ body {
   margin-bottom: 5px;
 }
 
+.table {
+  width: 100%;
+}
+
+.table thead th {
+  text-align: left;
+  padding: 8px;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.table thead  th{
+  border-top: none;
+}
+
+.table tbody td {
+  padding: 8px;
+  color: rgb(255, 191, 0);
+}
 
 @media (min-width: 768px) {
   .container {
     flex-direction: row;  
   }
 }
+

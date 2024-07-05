@@ -30,6 +30,7 @@ angular.module("beWalletApp").component("bewalletForm", {
         .then(
           function (response) {
             this.operators = response.data;
+            console.log(this.operators);
           }.bind(this)
         )
         .catch(function (error) {
@@ -44,9 +45,27 @@ angular.module("beWalletApp").component("bewalletForm", {
         );
         if (selectedOperator) {
           this.formData.currency = selectedOperator.currency;
+          console.log(this.formData);
         }
       }
-      $scope.$parent.submit(this.formData);
+      $http
+        .post(
+          "https://staging-merchant.be-wallet.net/api/v2/payments/checkout/init?locale=fr",
+          this.formData,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              Authorization: "Bearer token",
+            },
+          }
+        )
+        .then(function (response) {
+          window.location.href = response.data.payment_url;
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
     };
   },
 });
