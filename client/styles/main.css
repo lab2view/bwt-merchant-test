@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+
+.container h1 {
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  box-shadow: inset;
+}
+
+
+.left-section {
+  flex: 1;
+  background-color: rgb(249, 246, 238);
+  display: flex;
+  flex-direction: column;
+  margin: 0;  
+  padding: 20px;  
+}
+
+
+.right-section {
+  flex: 1;
+  background-color: #333;
+  color: rgb(255, 191, 0);
+  padding: 20px;  
+  width: 100%;
+  border-radius: 0px 0px 5px 0px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-6 {
+  flex: 0 0 50%;
+}
+
+.bewallet-form {
+  border: none;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  margin-bottom: 10px;  
+}
+
+
+.callbacks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.callbacks li {
+  margin-bottom: 5px;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;  
+  }
+}

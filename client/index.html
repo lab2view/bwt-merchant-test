@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="beWalletApp">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>BeWallet App</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-resource.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<script src="env.js"></script>
+	<script src="app/bewallet.app.js"></script>
+	<script src="components/bewallet-form.component.js"></script>
+	<script src="app/controllers/bewallet.ctrl.js"></script>
+</head>
+
+<body ng-controller="BeWalletCtrl as ctrl">
+	<div class="container">
+		<div class="left-section">
+			<h1>BeWallet Payment</h1>
+			<bewallet-form></bewallet-form>
+			<p style="color: #333; font-size: 12px;">* All fields are required</p>
+		</div>
+		<div class="right-section">
+			<h2>Callbacks</h2>
+			<ul class="callbacks">
+				<li ng-repeat="callback in ctrl.callbacks">{{ callback.data }}</li>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>

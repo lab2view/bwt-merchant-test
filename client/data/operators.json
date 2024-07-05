@@ -1,0 +1,44 @@
+[
+  {
+    "code": "2252",
+    "country": "CIV",
+    "currency": "XOF",
+    "operator": "Orange Money CIV"
+  },
+  {
+    "code": "2251",
+    "country": "CIV",
+    "currency": "XOF",
+    "operator": "MTN Mobile Money CIV"
+  },
+  {
+    "code": "2253",
+    "country": "CIV",
+    "currency": "XOF",
+    "operator": "Moov Money CIV"
+  },
+  {
+    "code": "2255",
+    "country": "CIV",
+    "currency": "XOF",
+    "operator": "Wave CIV"
+  },
+  {
+    "code": "2261",
+    "country": "BFA",
+    "currency": "XOF",
+    "operator": "Orange Money BFA"
+  },
+  {
+    "code": "2262",
+    "country": "BFA",
+    "currency": "XOF",
+    "operator": "Mobicash BFA"
+  },
+  {
+    "code": "2263",
+    "country": "BFA",
+    "currency": "XOF",
+    "operator": "Wave BFA"
+  }
+]
