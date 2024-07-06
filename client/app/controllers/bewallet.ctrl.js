@@ -19,7 +19,7 @@ angular
     $scope.statusIcons = {
       pending: "fas fa-clock",
       SUCCESS: "fas fa-check",
-      failed: "fas fa-times",
+      fail: "fas fa-times",
     };
 
     $scope.operators = [];
@@ -52,17 +52,33 @@ angular
         console.error("Error fetching callbacks:", error);
       });
 
-    // $http
-    //   .get("../data/callbacks.json")
-    //   .then(
-    //     function (response) {
-    //       this.callbacks = response.data;
-    //       console.log(this.callbacks);
-    //     }.bind(this)
-    //   )
-    //   .catch(function (error) {
-    //     console.error(error);
-    //   });
+    this.refreshCallbacks = function () {
+      $http
+        .get(window.env.callbackUrl + "/api/callbacks", {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        })
+        .then(
+          function (response) {
+            this.callbacks = response.data;
+            this.callbacks = this.callbacks.map(function (item) {
+              const data = JSON.parse(item.data);
+              return {
+                reference: item.reference,
+                transaction_id: data.transactionId,
+                amount: data.amount,
+                status: data.status,
+              };
+            });
+            console.log("Callbacks refreshed:", this.callbacks);
+          }.bind(this)
+        )
+        .catch(function (error) {
+          console.error("Error fetching callbacks:", error);
+        });
+    };
 
     $scope.submit = function () {
       $http
