@@ -96,11 +96,8 @@ body {
 .table thead th {
   text-align: left;
   padding: 8px;
-  background-color: #f2f2f2;
-  color: #333;
-}
-
-.table thead  th{
+  color: rgb(255, 191, 0);
+  font-weight: bold;
   border-top: none;
 }
 
