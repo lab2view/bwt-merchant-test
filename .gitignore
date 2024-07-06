@@ -1,6 +1,6 @@
 **/node_modules
 **/package-lock.json
 .vscode
-**/callbacks.db
-**/.env
-**/env.js
+./server/callbacks.db
+./client/.env
+./client/env.js
