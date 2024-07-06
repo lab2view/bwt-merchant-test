@@ -109,6 +109,10 @@ body {
   color: rgb(255, 191, 0);
 }
 
+.orange-text {
+    color: rgb(255, 191, 0);
+}
+
 @media (min-width: 768px) {
   .container {
     flex-direction: row;  
