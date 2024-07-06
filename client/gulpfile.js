@@ -7,8 +7,6 @@ gulp.task("replaceUrls", () => {
 
   const callbackUrl = process.env.CALLBACK_URL;
   const successUrl = process.env.SUCCESS_URL;
-  console.log("callbackUrl: ", callbackUrl);
-  console.log("successUrl: ", successUrl);
 
   if (!callbackUrl || !successUrl) {
     throw new Error(

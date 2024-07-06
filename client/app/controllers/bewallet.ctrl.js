@@ -18,7 +18,7 @@ angular
 
     $scope.statusIcons = {
       pending: "fas fa-clock",
-      success: "fas fa-check",
+      SUCCESS: "fas fa-check",
       failed: "fas fa-times",
     };
 
@@ -27,10 +27,24 @@ angular
     $scope.callbacks = [];
 
     $http
-      .get("/api/callbacks")
+      .get(window.env.callbackUrl + "/api/callbacks", {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      })
       .then(
         function (response) {
           this.callbacks = response.data;
+          this.callbacks = this.callbacks.map(function (item) {
+            const data = JSON.parse(item.data);
+            return {
+              reference: item.reference,
+              transaction_id: data.transactionId,
+              amount: data.amount,
+              status: data.status,
+            };
+          });
           console.log(this.callbacks);
         }.bind(this)
       )
