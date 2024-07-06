@@ -16,8 +16,8 @@ gulp.task("replaceUrls", () => {
 
   return gulp
     .src("env.js")
-    .pipe(replace("localhost:3000", callbackUrl))
-    .pipe(replace("localhost:8000", successUrl))
+    .pipe(replace("http://localhost:3000", callbackUrl))
+    .pipe(replace("http://localhost:8000", successUrl))
     .pipe(gulp.dest("./"));
 });
 
