@@ -27,7 +27,7 @@
 		</div>
 		<div class="right-section  col-xl-7 right-section d-none d-xl-block">
 			<h1>Callbacks</h1>
-			<button type="button" class="btn btn-primary mb-3" ng-click="ctrl.refreshCallbacks()">
+			<button type="button" class="btn btn-warning mb-3 refresh-button" ng-click="ctrl.refreshCallbacks()">
 				<i class="fas fa-sync-alt"></i>
 			</button>
 			<table datatable class="table table-striped">
@@ -40,7 +40,9 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr ng-repeat="callback in ctrl.callbacks" class="row">
+					<tr 
+					ng-repeat="callback in ctrl.paginatedCallbacks"
+					 class="row">
 						<td 
 							class="d-none d-xl-block col-xl-4 text-truncate"
 							data-bs-toggle="popover" data-bs-placement="top" title="{{ callback.reference }}"
@@ -58,6 +60,13 @@
 					</tr>
 				</tbody>
 			</table>
+			<div class="pagination-controls d-flex justify-content-between">
+				<button type="button" class="btn btn-sm btn-outline-danger" ng-disabled="ctrl.currentPage === 1"
+					ng-click="ctrl.prevPage()">Previous</button>
+				<span>Page {{ ctrl.currentPage }} of {{ ctrl.totalPages }}</span>
+				<button type="button" class="btn btn-sm btn-outline-danger" ng-disabled="ctrl.currentPage === ctrl.totalPages"
+					ng-click="ctrl.nextPage()">Next</button>
+			</div>
 		</div>
 	</div>
 </body>

@@ -45,7 +45,13 @@ body {
   color: rgb(255, 191, 0);
   padding: 40px;  
   border-radius: 0px 0px 5px 0px;
+  overflow: hidden;
 }
+
+.refresh-button {
+  float: right;
+}
+
 
 .row {
   display: flex;
