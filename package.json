@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "gulp-rename": "^2.0.0",
+    "gulp-template": "^6.0.0"
+  }
+}

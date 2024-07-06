@@ -2,3 +2,5 @@
 **/package-lock.json
 .vscode
 **/callbacks.db
+**/.env
+**/env.js

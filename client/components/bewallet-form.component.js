@@ -50,7 +50,7 @@ angular.module("beWalletApp").component("bewalletForm", {
       }
       $http
         .post(
-          "https://staging-merchant.be-wallet.net/api/v2/payments/checkout/init?locale=fr",
+          window.env.bwtUrl + "/payments/checkout/init?locale=fr",
           this.formData,
           {
             headers: {

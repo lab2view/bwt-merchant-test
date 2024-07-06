@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "gulp": "node node_modules/gulp-cli/bin/gulp.js replaceUrls"
+    "grunt": "node node_modules/grunt/bin/grunt"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,8 @@
     "dotenv": "^16.4.5"
   },
   "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-template": "^1.0.0",
     "gulp": "^5.0.0",
     "gulp-replace": "^1.1.4"
   }
