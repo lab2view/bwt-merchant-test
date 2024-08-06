@@ -52,5 +52,131 @@
     "country": "CMR",
     "currency": "XAF",
     "operator": "MTN CMR"
+  },
+  {
+    "id": 13,
+    "label": "Orange Money",
+    "code": "2231",
+    "country": "Mali",
+    "currency": "XOF"
+  },
+  {
+    "id": 18,
+    "label": "Mobicash",
+    "code": "2232",
+    "country": "Mali",
+    "currency": "XOF"
+  },
+  {
+    "id": 22,
+    "label": "Wave",
+    "code": "2233",
+    "country": "Mali",
+    "currency": "XOF"
+  },
+  {
+    "id": 12,
+    "label": "Orange Money Senegal",
+    "code": "2211",
+    "country": "Senegal",
+    "currency": "XOF"
+  },
+  {
+    "id": 16,
+    "label": "FREE MONEY Senegal",
+    "code": "2212",
+    "country": "Senegal",
+    "currency": "XOF"
+  },
+  {
+    "id": 17,
+    "label": "E MONEY Senegal",
+    "code": "2213",
+    "country": "Senegal",
+    "currency": "XOF"
+  },
+  {
+    "id": 20,
+    "label": "Wave Senegal",
+    "code": "2215",
+    "country": "Senegal",
+    "currency": "XOF"
+  },
+  {
+    "id": 9,
+    "label": "Moov Money Togo",
+    "code": "2281",
+    "country": "Togo",
+    "currency": "XOF"
+  },
+  {
+    "id": 21,
+    "label": "TMoney Togo",
+    "code": "2282",
+    "country": "Togo",
+    "currency": "XOF"
+  },
+  {
+    "id": 7,
+    "label": "Orange Money BF",
+    "code": "2261",
+    "country": "Burkina Faso",
+    "currency": "XOF"
+  },
+  {
+    "id": 11,
+    "label": "Mobicash BF",
+    "code": "2262",
+    "country": "Burkina Faso",
+    "currency": "XOF"
+  },
+  {
+    "id": 25,
+    "label": "Wave BF",
+    "code": "2263",
+    "country": "Burkina Faso",
+    "currency": "XOF"
+  },
+  {
+    "id": 8,
+    "label": "Moov Money Benin",
+    "code": "2291",
+    "country": "Benin",
+    "currency": "XOF"
+  },
+  {
+    "id": 10,
+    "label": "MTN Mobile Money Benin",
+    "code": "2292",
+    "country": "Benin",
+    "currency": "XOF"
+  },
+  {
+    "id": 23,
+    "label": "Moov Money Gabon",
+    "code": "2411",
+    "country": "Gabon",
+    "currency": "XAF"
+  },
+  {
+    "id": 24,
+    "label": "Airtel Money Gabon",
+    "code": "2412",
+    "country": "Gabon",
+    "currency": "XAF"
+  },
+  {
+    "id": 14,
+    "label": "Orange Money GNF",
+    "code": "2241",
+    "country": "Guinea",
+    "currency": "GNF"
+  },
+  {
+    "id": 15,
+    "label": "MTN Mobile Money GNF",
+    "code": "2242",
+    "country": "Guinea",
+    "currency": "GNF"
   }
 ]
