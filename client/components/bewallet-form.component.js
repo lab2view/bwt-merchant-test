@@ -14,11 +14,7 @@ angular.module("beWalletApp").component("bewalletForm", {
 
     this.updateMerchantData = function() {
       if (this.includePlayerId) {
-        this.merchantData = JSON.stringify({ playerID: '23432423' });
-        this.formData.merchant_data = this.merchantData;
-      } else {
-        this.merchantData = '';
-        this.formData.merchant_data = '';
+        this.formData.playerID = '23432423';
       }
     };
 
