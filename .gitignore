@@ -4,3 +4,4 @@
 ./server/callbacks.db
 ./client/.env
 ./client/env.js
+**/.idea
