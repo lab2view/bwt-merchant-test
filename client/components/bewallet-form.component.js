@@ -9,14 +9,7 @@ angular.module("beWalletApp").component("bewalletForm", {
       return prefix + timestamp + randomString + suffix;
     };
 
-    this.includePlayerId = false;
     this.merchantData = '';
-
-    this.updateMerchantData = function() {
-      if (this.includePlayerId) {
-        this.formData.playerID = '23432423';
-      }
-    };
 
     this.formData = {
       application_id: window.env.applicationId,
@@ -31,7 +24,8 @@ angular.module("beWalletApp").component("bewalletForm", {
       callback: window.env.callbackUrl + "/api/payment",
       success_url: window.env.successUrl + "/success.html",
       cancel_url: window.env.cancelUrl,
-      merchant_data: "" // Add merchant_data field to formData
+      merchant_data: "", 
+      playerID: '' 
     };
 
     this.$onInit = function () {
